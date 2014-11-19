@@ -1,6 +1,8 @@
 
 # showexpr
 
+  [![Build Status](https://travis-ci.org/jb55/showexpr.svg)](https://travis-ci.org/jb55/showexpr)
+
   Really dumb hack that returns the expression of the first argument in the
   callsite. Mostly copied from [better-assert](https://npmrepo.com/better-assert)
 
