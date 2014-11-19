@@ -9,7 +9,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "mocha -R tap | egrep -v \"^\\s+at\" | tap-dot"
   },
   "dependencies": {
     "callsite": "^1.0.0",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
-    "mocha": "*"
+    "mocha": "*",
+    "tap-dot": "^0.2.3"
   }
 }

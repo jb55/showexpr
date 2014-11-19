@@ -8,6 +8,10 @@ function fixture() {
   return showexpr();
 }
 
+fixture.prototype.member = function(){
+  return showexpr();
+}
+
 describe('showexpr', function(){
   it('works for argument', function(){
     function go(hi, hi2) {
@@ -36,6 +40,17 @@ describe('showexpr', function(){
   it('works with ) in arg', function(){
     var expr = fixture("has)parens");
     expect(expr).to.be("\"has)parens\"");
+  });
+
+  it('works with proto fn', function(){
+    var expr = (new fixture()).member(1 + 2);
+    expect(expr).to.be("1 + 2");
+  });
+
+  it('works with simple proto fn', function(){
+    var newfix = new fixture();
+    var expr = newfix.member(1 + 2);
+    expect(expr).to.be("1 + 2");
   });
 
 });
