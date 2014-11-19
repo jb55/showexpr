@@ -1,0 +1,21 @@
+{
+  "name": "showexpr",
+  "description": "show first callsite argument expression",
+  "keywords": [],
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jb55/showexpr.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "dependencies": {
+    "callsite": "^1.0.0",
+    "debug": "^2.1.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
